@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Áreas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Áreas</h1>
+        <p>Descubra a área de diferentes figuras geométricas</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Escolha uma figura geométrica</h2>
+
+            <label for="figura">Figura:</label>
+            <select id="figura" onchange="atualizarCampos()">
+                <option value="quadrado">Quadrado</option>
+                <option value="retangulo">Retângulo</option>
+                <option value="triangulo">Triângulo</option>
+                <option value="circulo">Círculo</option>
+            </select>
+
+            <div id="campoBase">
+                <label for="base" id="labelBase">Lado (cm):</label>
+                <input type="number" id="base" placeholder="Ex.: 5" min="0" step="any">
+            </div>
+
+            <div id="campoAltura" hidden>
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" placeholder="Ex.: 3" min="0" step="any">
+            </div>
+
+            <button type="button" onclick="calcularArea()">Calcular área</button>
+            <p id="resultado" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        Desenvolvido por HENRIQUE DUARTE | 2026 | Curso Programador FrontEnd SENAI
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

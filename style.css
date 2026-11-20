@@ -1,0 +1,122 @@
+:root {
+    --cor-principal: #315c8c;
+    --cor-destaque: #24466b;
+    --cor-hover: #1d3856;
+    --cor-fundo: #edf3f8;
+    --cor-card: #ffffff;
+    --cor-texto: #263747;
+    --cor-borda: #9bb5ce;
+    --cor-clara: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    text-align: center;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    padding: 28px 15px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.card {
+    background-color: var(--cor-card);
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    color: var(--cor-destaque);
+    margin-top: 0;
+}
+
+.card label {
+    display: block;
+    margin: 16px 0 8px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.card input,
+.card select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.card button {
+    margin-top: 22px;
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    padding: 12px 26px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: var(--cor-hover);
+}
+
+#resultado {
+    color: var(--cor-destaque);
+    font-size: 19px;
+    font-weight: bold;
+    min-height: 24px;
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    padding: 16px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 500px) {
+    .card {
+        padding: 22px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+}
